@@ -1,0 +1,1188 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>The SparkLeadsCo | ALU Rwanda</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'css/templatemo-tiya-golf-club.css' %}" rel="stylesheet">
+
+        <style>
+            /* Custom CSS for Hovering Profile Pics */
+            .member-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            /* 1. Lift the card slightly and deepen the shadow on hover */
+            .member-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; 
+            }
+
+            /* 2. Container for the image to manage the "pop-out" */
+            .member-img-wrapper {
+                position: relative;
+                display: inline-block;
+                border-radius: 50%; 
+                transition: transform 0.3s ease;
+            }
+
+            /* 3. The specific effect on the profile picture when the CARD is hovered */
+            .member-card:hover .member-img-wrapper {
+                transform: scale(1.1); 
+            }
+
+            .member-img-wrapper img {
+                transition: box-shadow 0.3s ease;
+            }
+
+            .member-card:hover .member-img-wrapper img {
+                box-shadow: 0 0 15px rgba(var(--bs-primary-rgb), 0.5); 
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- Challenge 01 Modal-->
+        <div class="modal fade" id="challenge1Modal" tabindex="-1" aria-labelledby="challenge1Label" aria-hidden="true" style="z-index: 9999;">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg overflow-hidden">
+                                                
+                        <div class="modal-header bg-dark text-white py-3 px-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <i class="bi-person-badge text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="modal-title mb-0" id="challenge1Label">Challenge 01</h5>
+                                    <small class="text-info text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: Introduction & Vision</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-0">
+                            <div class="container-fluid">
+                                <div class="row g-0">
+                                    
+                                    <div class="col-lg-7 bg-black">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe 
+                                                src="https://youtube.com/embed/Xw4fQRAu-z8" 
+                                                title="Team Introduction" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                        <h3 class="fw-bold text-dark mb-3">Meet The SparkLeads Co.</h3>
+                                        
+                                        <p class="text-muted mb-4" style="line-height: 1.6;">
+                                            We are a dedicated team of six students—comprising three app designers and a practicing farm owner. This unique blend of **technical design** and **boots-on-the-ground experience** allows us to build solutions that are not just high-tech, but truly practical for the rural Rwandan landscape.
+                                        </p>
+
+                                        <div class="bg-light p-4 rounded-3 mb-4">
+                                            <h6 class="text-primary fw-bold text-uppercase mb-3" style="font-size: 0.8rem;">Contribution to ThinkTank</h6>
+                                            <p class="small text-dark mb-3">We bring a field-validated perspective on AI adoption and localized agricultural training strategies.</p>
+                                            
+                                            <h6 class="text-primary fw-bold text-uppercase mb-2" style="font-size: 0.8rem;">E-LAB Expectations</h6>
+                                            <p class="small text-dark mb-0">We aim to refine our prototype, gain mentorship in sustainable business modeling, and scale our impact by 2037.</p>
+                                        </div>
+
+                                        <div class="border-start border-primary border-4 ps-3">
+                                            <p class="small text-muted mb-0 italic">"Our strength lies in the intersection of digital innovation and ancestral farming wisdom."</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--   Challenge 02 Modal -->
+
+<div class="modal fade" id="challenge2Modal" tabindex="-1" aria-labelledby="challenge2Label" aria-hidden="true" style="z-index: 9999;">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg overflow-hidden">
+                                                
+                        <div class="modal-header bg-dark text-white py-3 px-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <i class="bi-globe-central-south-asia text-dark"></i>
+                                </div>
+                                <div>
+                                    <h5 class="modal-title mb-0" id="challenge2Label">Challenge 02</h5>
+                                    <small class="text-warning text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: Discover Africa</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-0">
+                            <div class="container-fluid">
+                                <div class="row g-0">
+                                    
+                                    <div class="col-lg-7 bg-black">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://youtube.com/embed/iOPfXjRDShU" 
+                                                    title="Tooro Kingdom Cultural Exploration"                                  
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                        <h3 class="fw-bold text-dark mb-3">The Tooro Kingdom</h3>
+                                        <h6 class="text-muted mb-4">A Journey into Western Uganda's Heritage</h6>
+                                        
+                                        <p class="text-dark mb-4" style="line-height: 1.6; font-size: 0.95rem;">
+                                            In this challenge, we explored the rich cultural tapestry of the **Tooro Kingdom** in Fort Portal. Known for its breathtaking landscapes and the "Empaako" naming tradition, Tooro represents a deep-rooted history of peace and hospitality.
+                                        </p>
+
+                                        <div class="row g-3 mb-4">
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-heart-fill text-danger mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Empaako</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Pet Names</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-houses-fill text-warning mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Karuzika</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Royal Palace</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-light p-3 rounded-3 border-start border-warning border-4">
+                                            <p class="small text-dark mb-0 italic">
+                                                "Our exploration highlighted the lifestyle of the Batooro people, their respect for tradition, and how these cultural values foster community resilience—lessons we carry into our own collaborative work."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--   Challenge 03 Modal -->
+            
+            <div class="modal fade" id="challenge3Modal" tabindex="-1" aria-labelledby="challenge3Label" aria-hidden="true" style="z-index: 9999;">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg overflow-hidden">
+
+                        <div class="modal-header bg-dark text-white py-3 px-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-danger rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <i class="bi-heart-fill text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="modal-title mb-0" id="challenge3Label">Challenge 03</h5>
+                                    <small class="text-danger text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: HELP-LAB</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-0">
+                            <div class="container-fluid">
+                                <div class="row g-0">
+                                    
+                                    <div class="col-lg-7 bg-black">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://youtube.com/embed/DhX29zzdsH4" 
+                                                    title="HELP-LAB Little Gems Academy"                                  
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                        <h3 class="fw-bold text-dark mb-3">Little Gems Academy</h3>
+                                        <h6 class="text-muted mb-4">Empowering Young Minds in Kacyiru</h6>
+                                        
+                                        <p class="text-dark mb-4" style="line-height: 1.6; font-size: 0.95rem;">
+                                            For this challenge, we visited **Little Gems Academy** in Kacyiru to give back to the community. We focused our efforts on helping students with **comprehensive reading**, ensuring they grasp the core concepts of their lessons.
+                                        </p>
+
+                                        <div class="row g-3 mb-4">
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-book-half text-primary mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Literacy</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Reading Skills</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-people-fill text-success mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Engagement</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Student Support</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-light p-3 rounded-3 border-start border-danger border-4">
+                                            <p class="small text-dark mb-0 italic">
+                                                "Our visit reinforced the importance of education and literacy. Seeing the students' enthusiasm for reading reminded us that leadership starts with empowering the next generation."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  Challenge 04 Modal   -->
+            <div class="modal fade" id="challenge4Modal" tabindex="-1" aria-labelledby="challenge4Label" aria-hidden="true" style="z-index: 9999;">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg overflow-hidden">
+
+                        <div class="modal-header bg-dark text-white py-3 px-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <i class="bi-search text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="modal-title mb-0" id="challenge4Label">Challenge 04</h5>
+                                    <small class="text-success text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: Hunt for Treasure</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-0">
+                            <div class="container-fluid">
+                                <div class="row g-0">
+                                    
+                                    <div class="col-lg-7 bg-black">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://youtube.com/embed/ph4KSG3S4do" 
+                                                    title="Hunt for Treasure - Bugesera Farm Visits"                                  
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                        <h3 class="fw-bold text-dark mb-3">Bugesera Field Research</h3>
+                                        <h6 class="text-muted mb-4">Interviewing the Leaders of Agriculture</h6>
+                                        
+                                        <p class="text-dark mb-4" style="line-height: 1.6; font-size: 0.95rem;">
+                                            In our "Hunt for Treasure" challenge, we traveled to **Bugesera District** to gain first-hand insights into large-scale farming. We visited **Nimaaa Farms** and **Njema Farms**, where we conducted deep-dive interviews with the farm owners.
+                                        </p>
+
+                                        <div class="row g-3 mb-4">
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-chat-dots-fill text-primary mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Interviews</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Direct Insights</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border rounded shadow-sm text-center">
+                                                    <i class="bi bi-moisture text-info mb-2"></i>
+                                                    <p class="small fw-bold mb-0">Operations</p>
+                                                    <small class="text-muted" style="font-size: 0.7rem;">Bugesera Ag</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-light p-3 rounded-3 border-start border-success border-4">
+                                            <p class="small text-dark mb-0 italic">
+                                                "The real 'treasure' was the wealth of knowledge shared by the farm owners. Understanding their daily challenges and successes is crucial as we refine our innovative solutions for the agricultural sector."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--  Challenge 05 Modal  -->
+            
+            <div class="modal fade" id="challenge5Modal" tabindex="-1" aria-labelledby="challenge5Label" aria-hidden="true" style="z-index: 9999;">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg overflow-hidden">
+
+                            <div class="modal-header bg-dark text-white py-3 px-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                        <i class="bi bi-rocket-takeoff-fill text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="modal-title mb-0" id="challenge5Label">Challenge 05</h5>
+                                        <small class="text-info text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: Launch Your Mission</small>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body p-0">
+                                <div class="container-fluid">
+                                    <div class="row g-0">
+                                        
+                                        <div class="col-lg-7 bg-black">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://youtube.com/embed/ph4KSG3S4do" 
+                                                        title="Launch Your Mission - The Pitch"                                  
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                        allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                            <h3 class="fw-bold text-dark mb-3">The Pitch</h3>
+                                            <h6 class="text-muted mb-4">Empowering Farmers through AI & Innovation</h6>
+                                            
+                                            <p class="text-dark mb-4" style="line-height: 1.6; font-size: 0.9rem;">
+                                                Our solution is a mobile app and physical toolkit that helps smallholder farmers identify crop diseases and soil issues by simply taking a photo. With instant AI-powered diagnosis in local languages and a printed manual for offline access, we ensure no farmer is left behind.
+                                            </p>
+
+                                            <div class="row g-3 mb-4">
+                                                <div class="col-6">
+                                                    <div class="p-3 border rounded shadow-sm text-center">
+                                                        <i class="bi bi-cpu text-primary mb-2"></i>
+                                                        <p class="small fw-bold mb-0">AI Diagnosis</p>
+                                                        <small class="text-muted" style="font-size: 0.7rem;">Instant Results</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="p-3 border rounded shadow-sm text-center">
+                                                        <i class="bi bi-snow text-info mb-2"></i>
+                                                        <p class="small fw-bold mb-0">Cold Storage</p>
+                                                        <small class="text-muted" style="font-size: 0.7rem;">Future Growth</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-grid mb-4">
+                                                <a href="https://docs.google.com/presentation/d/1twFIVNQ7IOr75IuV-FaVpUwokGyaPkW4SN1Yke575NA/edit?usp=sharing" target="_blank" class="btn btn-outline-dark d-flex align-items-center justify-content-center py-2">
+                                                    <i class="bi bi-file-earmark-ppt-fill text-danger me-2"></i>
+                                                    View Pitch Presentation (PPT)
+                                                </a>
+                                            </div>
+
+                                            <div class="bg-light p-3 rounded-3 border-start border-info border-4">
+                                                <p class="small text-dark mb-0 italic">
+                                                    "As a team of designers and a practicing farm owner, our solution is practical, affordable, and truly fit for the farmers who need it most."
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!--  Challenge 06 Modal  -->
+
+                <div class="modal fade" id="challenge6Modal" tabindex="-1" aria-labelledby="challenge6Label" aria-hidden="true" style="z-index: 9999;">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content border-0 shadow-lg overflow-hidden">
+
+                                <div class="modal-header bg-dark text-white py-3 px-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                            <i class="bi bi-browser-safari text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="modal-title mb-0" id="challenge6Label">Challenge 06</h5>
+                                            <small class="text-primary text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Phase: Digital Print</small>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body p-0">
+                                    <div class="container-fluid">
+                                        <div class="row g-0">
+                                            
+                                            <div class="col-lg-7 bg-light d-flex align-items-center justify-content-center p-4">
+                                                <div class="text-center">
+                                                    <i class="bi bi-laptop text-primary mb-3" style="font-size: 4rem;"></i>
+                                                    <h4 class="fw-bold">ThinkTank Platform</h4>
+                                                    <p class="text-muted px-md-5">A unified digital hub documenting the 6-stage E-Lab journey and the visionary team behind the SparkLeads Co.</p>
+                                                    
+                                                    <div class="mt-4 d-flex justify-content-center gap-3">
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-1-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 1</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-2-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 2</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-3-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 3</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-4-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 4</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-5-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 5</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <div class="bg-white shadow-sm p-3 rounded mb-2 border">
+                                                                <i class="bi bi-6-circle text-primary"></i>
+                                                            </div>
+                                                            <small class="fw-bold">Phase 6</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center bg-white">
+                                                <h3 class="fw-bold text-dark mb-3">Our Digital Print</h3>
+                                                <h6 class="text-muted mb-4">Building the SparkLeads Online Hub</h6>
+                                                
+                                                <p class="text-dark mb-4" style="line-height: 1.6; font-size: 0.95rem;">
+                                                    This final challenge focused on establishing our online presence. The **ThinkTank Website** showcases all six E-Lab challenges, documenting our growth from community service in Kacyiru to farm research in Bugesera.
+                                                </p>
+
+                                                <div class="bg-light p-4 rounded-3 mb-4 border-start border-primary border-4">
+                                                    <h6 class="text-primary fw-bold text-uppercase mb-3" style="font-size: 0.8rem;">Website Architecture</h6>
+                                                    <ul class="list-unstyled mb-0 small text-dark">
+                                                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>Challenge Archive:</strong> Documentation of all 6 phases.</li>
+                                                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>Team Profile:</strong> Showcasing our 6 members & skills.</li>
+                                                        <li class="mb-0"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>Solution Vision:</strong> Detailed AI Farming toolkit brief.</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="d-grid">
+                                                    <a href="#home" target="_blank" class="btn btn-primary d-flex align-items-center justify-content-center py-2 shadow-sm">
+                                                        <i class="bi bi-globe me-2"></i>
+                                                        Explore the The SparkLeadsCo Site
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+
+                </div>
+            
+        <main>
+
+            <nav class="navbar navbar-expand-lg">                
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="{% static 'images/logo.png' %}" class="navbar-brand-image img-fluid" alt="ThinkTank Logo">
+                        <span class="navbar-brand-text">
+                            The SparkLeadsCo
+                            <small>E-LAB at ALU Rwanda</small>
+                        </span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-3">
+                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Mission</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_3">Problem</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">Solution</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Prototype</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_6">Contact Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge1Modal">Challenge 1 - Introduction</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge2Modal">Challenge 2 - Discover Africa</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge3Modal">Challenge 3 - HELP-LAB</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge4Modal">Challenge 4 - Hunt For Treasure</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge5Modal">Challenge 5 - Launch Your Mission</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge6Modal">Challenge 6 - Digital Print</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block ms-lg-3">
+                            <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">                
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">The SparkLeadsCo Member Login</h5>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body d-flex flex-column">
+                    <form class="custom-form member-login-form" action="{% url 'login' %}" method="post" role="form">
+                            {% csrf_token %}
+                        <div class="member-login-form-body">
+                            <div class="mb-4">
+                                <label class="form-label mb-2" for="member-login-number">Member ID</label>
+
+                                <input type="text" name="member-login-number" id="member-login-number" class="form-control" placeholder="TT-00123" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                                <input type="password" name="member-login-password" id="member-login-password"  class="form-control" placeholder="Password" required="">
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                <button type="submit" class="form-control">Login</button>
+                            </div>
+
+                            <div class="text-center my-4">
+                                <a href="#">Forgotten password?</a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="mt-auto mb-5">
+                        <p>
+                            <strong class="text-white me-3">Need Assistance?</strong>
+
+                            <a href="mailto:support@thinktanklab.com" class="contact-link">
+                                thesparkleadsco5@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D405B" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+            </div>
+            
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
+                <div class="section-overlay"></div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D405B" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <h2 class="text-white">Welcome to The SparkLeadsCo</h2>
+
+                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
+                                <span>Our E-LAB Challenges are</span>
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">Innovative</b>
+                                    <b>Creative</b>
+                                    <b>Impactful</b>
+                                </span>
+                            </h1>
+
+                            <div class="custom-btn-group">
+                                <a href="#section_2" class="btn custom-btn smoothscroll me-3">Our Mission</a>
+                                <a href="#section_3" class="link smoothscroll">Explore Challenges</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="ratio ratio-16x9">
+                                <iframe width="560" height="315" src="https://youtube.com/embed/Xw4fQRAu-z8" title="ThinkTank Overview Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+            </section>
+
+            <section class="about-section section-padding bg-light" id="section_2">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-10 col-12 text-center">
+                            <h2 class="display-5 fw-bold mb-5">Our Mission</h2>
+                            
+                            <div class="mission-card p-5 bg-white shadow-lg rounded-4 position-relative overflow-hidden">
+                                <div class="bg-primary position-absolute start-0 top-0 h-100" style="width: 8px;"></div>
+                                
+                                <div class="px-md-4">
+                                    <p class="lead text-dark mb-4" style="line-height: 1.8; font-size: 1.25rem;">
+                                        "Our mission is to empower <strong>Rwandan smallholder farmers</strong> to break the cycle of low productivity by delivering affordable, <strong>AI-powered crop diagnosis</strong> technology, locally made <strong>soil pH testing kits</strong>, and <strong>bilingual printed manuals</strong>—practical tools built for farmers who have been left behind by existing solutions."
+                                    </p>
+                                    
+                                    <div class="d-flex align-items-center justify-content-center mt-4">
+                                        <hr class="flex-grow-1 d-none d-sm-block">
+                                        <span class="mx-3 text-uppercase fw-bold text-primary tracking-wider" style="letter-spacing: 2px;">
+                                            Vision 2037
+                                        </span>
+                                        <hr class="flex-grow-1 d-none d-sm-block">
+                                    </div>
+                                    
+                                    <p class="text-muted mt-3 mb-0">
+                                        We are dedicated to closing the productivity gap and fostering economic resilience by 2037.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="section-bg-image">
+                <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> 
+                    <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> 
+                    <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path>
+                    <path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path>
+                    <path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path>
+                </svg>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <div class="section-bg-image-block">
+                                <h2 class="mb-lg-3">Join Our Newsletter</h2>
+
+                                <p>Stay updated with our latest E-LAB challenges, prototypes, and innovation insights. Subscribe to receive news directly to your inbox.</p>
+
+                                <form action="{% url 'subscribe' %}" method="get" class="custom-form mt-lg-4 mt-2" role="form">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text bi-envelope" id="basic-addon1"></span>
+
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+
+                                        <button type="submit" class="form-control">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> 
+                    <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> 
+                    <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path>
+                    <path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path>
+                    <path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path>
+                </svg>
+            </section>
+
+           <section class="membership-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center mx-auto mb-lg-5 mb-4">
+                            <h2><span>The</span> SparkLeadsCo</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-3 mb-lg-0">
+                            <h4 class="mb-4 pb-lg-2">Participation Levels</h4>
+
+                            <div class="table-responsive">
+                                <table class="table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 34%;">Access Type</th>
+                                            <th style="width: 22%;">Level 1</th>
+                                            <th style="width: 22%;">Level 2</th>
+                                            <th style="width: 22%;">Level 3</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="text-start">E-LAB Challenge Access</th>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text-start">Prototype Workshops</th>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text-start">Mentorship Sessions</th>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text-start">Networking Events</th>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text-start">Project Showcases</th>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text-start">Digital Recognition</th>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-x-circle-fill"></i></td>
+                                            <td><i class="bi-check-circle-fill"></i></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <h4 class="mb-4 pb-lg-2">Problem Statement</h4>
+                            
+                            <div class="p-5 bg-white rounded shadow-lg border-top border-primary border-5">
+                                <p class="text-dark mb-4" style="line-height: 1.8; font-size: 1.05rem;">
+                                    Despite Rwanda's agricultural potential, smallholder farmers face significant challenges arising from <strong>outdated farming practices</strong>, <strong>inadequate trainings</strong>, and <strong>limited access to technology</strong>.
+                                </p>
+
+                                <p class="text-muted mb-4">
+                                    Approximately <span class="badge bg-primary">70% of Rwanda's population</span> engages in agriculture (World Bank, 2022), mostly in rural areas where the farming landscape is characterized by low productivity and poor income, particularly during key planting and harvest seasons (FAO, 2021).
+                                </p>
+
+                                <p class="text-muted mb-4">
+                                    These issues stem from a lack of access to affordable modern farming techniques and insufficient training programs (Rwanda Ministry of Agriculture, 2020), resulting in the inability of farmers to meet both local and international market demands.
+                                </p>
+
+                                <hr class="my-4">
+
+                                <h6 class="text-uppercase fw-bold text-primary mb-3">Our 2037 Vision</h6>
+                                <p class="small text-dark italic">
+                                    "Addressing this issue is crucial for enhancing food security and fostering economic growth. Our aim is to reduce the productivity gap to possible low levels by 2037 by implementing targeted training and affordable tech-based farming solutions."
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="events-section section-bg section-padding" id="section_4">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5 mb-lg-0">
+                            <h2 class="mb-4">Our Solution</h2>
+                            
+                            <div class="p-5 bg-white rounded shadow-lg border-top border-success border-5">
+                                <p class="text-dark mb-4" style="line-height: 1.8; font-size: 1.1rem;">
+                                    Our solution is a <strong>mobile app and physical toolkit</strong> that helps smallholder farmers identify and solve crop diseases, pest problems, and soil issues by simply taking a photo.
+                                </p>
+
+                                <p class="text-muted small mb-4">
+                                    By receiving an instant AI-powered diagnosis and treatment advice in their local language, farmers can act quickly. For those without internet, our printed manuals and affordable soil pH detectors ensure no one is left behind.
+                                </p>
+
+                                <div class="bg-light p-3 rounded mb-4">
+                                    <p class="small text-muted mb-0">
+                                        <strong>The Team:</strong> As a group of six students—including three app designers and a practicing farm owner—we build tools that are practical, affordable, and field-tested.
+                                    </p>
+                                </div>
+
+                                <h6 class="text-uppercase fw-bold text-success mb-3">Future Growth</h6>
+                                <p class="small text-dark italic">
+                                    "We are currently working on solar cold storage units to reduce post-harvest losses, making our solution truly fit for the farmers who need it most."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 col-12 ps-lg-5">
+                            <div class="row g-4">
+                                
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Tharcisse">
+                                        </div>
+                                        <h6 class="mb-1">Tharcisse IRASUBIZA</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Founder</p>
+                                                                                <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Sandy">
+                                        </div>
+                                        <h6 class="mb-1">Tumusifu .....</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Co-Founder</p>
+                                                                                <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Alex">
+                                        </div>
+                                        <h6 class="mb-1">Victoria KIRUNGI</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Tech Lead</p>
+                                                                                <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Jane">
+                                        </div>
+                                        <h6 class="mb-1">Tsungi ....</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Agri Specialist</p>
+                                                                                <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Paul">
+                                        </div>
+                                        <h6 class="mb-1">Said MUGABO</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Data Analyst</p>
+                                                                                <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card member-card border-0 shadow-sm text-center h-100 py-4">
+                                        <div class="member-img-wrapper mx-auto mb-3">
+                                            <img src="{% static 'images/members/tharcisse.jpg' %}" class="rounded-circle img-fluid shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Linda">
+                                        </div>
+                                        <h6 class="mb-1">Wezzie SELEMANI</h6>
+                                        <p class="text-primary x-small fw-bold mb-0">Community Lead</p>
+                                        <div class="d-flex justify-content-center gap-3 mt-2">
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-instagram"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-twitter-x"></i></a>
+                                            <a href="#" class="text-muted member-social-link"><i class="bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section section-padding" id="section_5">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <h2 class="mb-4">Our Prototype: AI-Powered Farm Guide</h2>
+                            
+                            <div class="p-4 bg-white rounded shadow-sm">
+                                <p class="text-dark mb-3">
+                                    Our core technology is an <strong>AI-based mobile application</strong> that empowers smallholder farmers with an intelligent assistant. By simply taking a photo, the app provides an instant diagnosis of crop diseases, pests, and soil health issues.
+                                </p>
+                                
+                                <ul class="list-unstyled text-muted small mb-4">
+                                    <li class="mb-2"><i class="bi bi-camera me-2 text-primary"></i> Instant AI Diagnosis via camera.</li>
+                                    <li class="mb-2"><i class="bi bi-chat-left-text me-2 text-primary"></i> Advice in local languages.</li>
+                                    <li class="mb-2"><i class="bi bi-book me-2 text-primary"></i> Comprehensive, step-by-step <strong>cultivation guides</strong> for key crops.</li>
+                                </ul>
+
+                                <p class="small text-muted border-start border-warning border-4 ps-3">
+                                    <i class="bi bi-cone-striped text-warning me-2"></i><strong>Development Status:</strong> This prototype is currently <strong>in progress and actively developing</strong> in real farming environments.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 ps-lg-5">
+                            <div class="p-3 bg-white rounded shadow-lg">
+                                <img src="{% static 'images/ai_app.png' %}" class="img-fluid rounded shadow-sm" alt="AI Farm Guide Prototype Display" loading="lazy">
+                                <p class="text-center text-muted small mt-2">Experimental Interface - Field Testing (2024)</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12">
+                            <form action="{% url 'contact_page' %}" method="post" class="custom-form contact-form" role="form">
+                                {% csrf_token %}
+                                <h2 class="mb-4 pb-2">Contact TheSparkLeads</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="full-name" id="full-name" class="form-control" placeholder="Full Name" required="">
+                                            <label for="floatingInput">Full Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12"> 
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+                                            <label for="floatingInput">Email address</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Write your message here"></textarea>
+                                            <label for="floatingTextarea">Message</label>
+                                        </div>
+
+                                        <button type="submit" class="form-control">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="contact-info mt-5">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-body">
+                                        <strong>Kigali, Rwanda</strong>
+                                        <p class="mt-2 mb-1">
+                                            <a href="tel:+250788123456" class="contact-link">(250) 790 145 255</a>
+                                        </p>
+                                        <p class="mb-0">
+                                            <a href="mailto:info@thinktank.rw" class="contact-link">thesparkleadsco5@gmail.com</a>
+                                        </p>
+                                    </div>
+                                    <div class="contact-info-footer">
+                                        <a href="#">Directions</a>
+                                    </div>
+                                </div>
+                                <img src="{% static 'images/WorldMap.svg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 me-auto mb-5 mb-lg-0">
+                        <a class="navbar-brand d-flex align-items-center" href="/">
+                            <img src="{% static 'images/logo.png' %}"  class="navbar-brand-image img-fluid" alt="">
+                            <span class="navbar-brand-text">
+                                The
+                                <small>SparkLeadsCo</small>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-12">
+                        <h5 class="site-footer-title mb-4">Join Us</h5>
+
+                        <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
+                            <span>Mon-Fri</span>
+                            6:00 AM - 6:00 PM
+                        </p>
+
+                        <p class="d-flex me-lg-3">
+                            <span>Sat-Sun</span>
+                            6:30 AM - 8:30 PM
+                        </p>
+                        <br>
+                        <p class="copyright-text">Copyright © 2026 The SparkLeadsCo</p>
+                    </div>
+
+                        <div class="col-lg-2 col-12 ms-auto">
+                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                            <p class="copyright-text">Design: <a rel="nofollow" href="#" target="_parent">TheSparkLeads</a>. Distributed by <a href="#" target="_parent">TheSparkLeads</a></p>
+                            
+                        </div>
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/click-scroll.js' %}"></script>
+        <script src="{% static 'js/animated-headline.js' %}"></script>
+        <script src="{% static 'js/modernizr.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <script>
+            // This stops the video when the modal is closed
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+    modal.addEventListener('hidden.bs.modal', function () {
+        const iframe = modal.querySelector('iframe');
+        if (iframe) {
+            const src = iframe.src;
+            iframe.src = src; // Reloads the iframe which stops the video
+        }
+    });
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl)
+    });
+    toastList.forEach(toast => toast.show());
+});
+        </script>
+
+        <!--  MESSAGES  -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="toast align-items-center text-white bg-{% if message.tags == 'error' %}danger{% elif message.tags == 'success' %}success{% else %}info{% endif %} border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <i class="bi-info-circle me-2"></i>
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+    </body>
+</html>
