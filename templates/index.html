@@ -52,6 +52,52 @@
             .member-card:hover .member-img-wrapper img {
                 box-shadow: 0 0 15px rgba(var(--bs-primary-rgb), 0.5); 
             }
+
+
+
+            /* Fix for the Dropdown background on mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse .dropdown-menu {
+        background-color: #f8f9fa; /* Match your navbar's background color */
+        border: none;
+        padding-left: 1.5rem; /* Indent items so they look nested */
+        margin-bottom: 1rem;
+        box-shadow: none !important; /* Shadows look messy inside a collapsed menu */
+    }
+
+    /* Prevent the brand text from overlapping the toggler */
+    .navbar-brand {
+        white-space: normal; /* Allow the name to wrap to two lines if needed */
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width: 991.98px) {
+    /* Force the dropdown to expand the navbar background instead of floating over it */
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%; /* Ensure it takes full width */
+        background-color: rgb(225,225,225); /* Slight tint to distinguish the area */
+        border: none;
+        padding: 10px 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    /* Handle long text in the links */
+    .dropdown-item {
+        white-space: normal; /* Allow text to wrap to a second line if it's too long */
+        word-wrap: break-word;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: separator for clarity */
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
         </style>
     </head>
     
@@ -527,22 +573,23 @@
         <main>
 
             <nav class="navbar navbar-expand-lg">                
-                <div class="container">
-                    <a class="navbar-brand d-flex align-items-center" href="#">
-                        <img src="{% static 'images/logo.png' %}" class="navbar-brand-image img-fluid" alt="ThinkTank Logo">
-                        <span class="navbar-brand-text">
+                <div class="container flex-wrap flex-lg-nowrap"> <a class="navbar-brand d-flex align-items-center me-2" href="#" style="max-width: 60%;">
+                        <img src="{% static 'images/logo.png' %}" class="navbar-brand-image img-fluid" alt="Logo" style="width: 40px;">
+                        <span class="navbar-brand-text ms-2 text-truncate" style="font-size: 0.9rem; line-height: 1.2;">
                             The SparkLeadsCo
-                            <small>E-LAB at ALU Rwanda</small>
+                            <small class="d-block text-muted" style="font-size: 0.7rem;">E-LAB at ALU Rwanda</small>
                         </span>
                     </a>
 
-                    <div class="d-lg-none ms-auto me-3">
-                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
-                    </div>
+                    <div class="d-flex align-items-center ms-auto">
+                        <div class="d-lg-none me-2">
+                            <a class="btn custom-btn custom-border-btn btn-sm" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button">Login</a>
+                        </div>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-auto">
@@ -569,24 +616,23 @@
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_6">Contact Us</a>
                             </li>
-
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge1Modal">Challenge 1 - Introduction</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge2Modal">Challenge 2 - Discover Africa</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge3Modal">Challenge 3 - HELP-LAB</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge4Modal">Challenge 4 - Hunt For Treasure</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge5Modal">Challenge 5 - Launch Your Mission</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#challenge6Modal">Challenge 6 - Digital Print</a></li>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Challenges
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-light border-0 shadow-sm custom-mobile-dropdown" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge1Modal">Challenge 1 - Introduction</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge2Modal">Challenge 2 - Discover Africa</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge3Modal">Challenge 3 - HELP-LAB</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge4Modal">Challenge 4 - Hunt For Treasure</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge5Modal">Challenge 5 - Launch Your Mission</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-bs-toggle="modal" data-bs-target="#challenge6Modal">Challenge 6 - Digital Print</a></li>
                                 </ul>
-
                             </li>
                         </ul>
 
                         <div class="d-none d-lg-block ms-lg-3">
-                            <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                            <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button">Member Login</a>
                         </div>
                     </div>
                 </div>
