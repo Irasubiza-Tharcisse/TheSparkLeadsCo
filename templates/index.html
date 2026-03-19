@@ -1258,8 +1258,18 @@
                         function doLogin(){
                             goTo(3);
                         }
+                        let lang="en";
 
-                        render();
+                        function toggleLang(){
+                            lang = (lang==="en") ? "rw" : "en";
+
+                            if(lang==="rw"){
+                                document.getElementById("disease-title").textContent="Indwara: Leaf Blight";
+                            } else {
+                                document.getElementById("disease-title").textContent="Disease: Leaf Blight";
+                            }
+                        }
+                                                render();
                         </script>
 
                                 </div>
