@@ -4,6 +4,13 @@
 
 ---
 
+## 🌐 **Live Website**
+
+👉 **Visit Our Platform:**  
+🔗 https://thesparkleadsco.pythonanywhere.com/
+
+---
+
 ## 📌 **Overview**
 
 **The SparkLeadsCo** is an **agri-tech innovation project** focused on transforming agriculture in Rwanda by equipping smallholder farmers with:
